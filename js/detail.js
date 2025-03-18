@@ -1,6 +1,6 @@
 import { fetchMovieDetails } from "./api.js"
-import { IMAGE_BASE_URL } from "./config.js"
-import { Favourites } from "./app.js"
+import { IMAGE_BASE_URL, DEFAULT_IMAGE } from "./config.js"
+import { Favourites } from "./favourite.js"
 import { getStorage } from "./storage.js"
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -24,10 +24,10 @@ export const loadMovieDetails = async() =>{
 
         
        const backdrop =  document.getElementById('backdrop')
-        backdrop.src = `${IMAGE_BASE_URL}${movie.backdrop_path}`
+        backdrop.src = movie.backdrop_path?`${IMAGE_BASE_URL}${movie.backdrop_path}`:DEFAULT_IMAGE
 
         const poster = document.getElementById('poster')
-        poster.src = `${IMAGE_BASE_URL}${movie.poster_path}`
+        poster.src = movie.poster_path?`${IMAGE_BASE_URL}${movie.poster_path}`:DEFAULT_IMAGE
 
         const title = document.getElementById('name')
         title.textContent = movie.title

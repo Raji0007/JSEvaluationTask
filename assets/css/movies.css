@@ -1,3 +1,42 @@
+#heading-sort{
+    width: 100%;
+    height: auto;
+    background-color: black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+}
+
+#heading-sort div{
+    color: white;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#heading-sort select{
+    position: absolute;
+    right: 35px;
+
+    padding: 10px;
+    outline: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+#heading-sort label{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+
+    position: absolute;
+    right: 170px;
+    z-index: 1;
+}
+
 #movies-container{
     height: auto;
 
@@ -24,4 +63,29 @@
 
 .movie-card:hover{
     scale: 1.05;
+}
+
+#btn-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding-bottom: 20px;
+}
+
+
+#more-btn{
+    align-self: center;
+    padding: 12px;
+    outline:none;
+    border: 1px solid white;
+    color: white;
+    background-color: black; 
+    border-radius: 8px; 
+    transition: 0.2s all ease;  
+}
+
+#more-btn:hover{
+    scale: 1.05;
+
 }

@@ -8,7 +8,7 @@ export const createMovieCard = (movie) => {
 
     card.innerHTML = `
         <div class="movie-image" onClick='GetDetails(movie.movie.id)'>
-            <img src="${IMAGE_BASE_URL + movie.poster_path}" alt="${movie.title}"/>  
+            <img src="${movie.poster_path?IMAGE_BASE_URL + movie.poster_path:DEFAULT_IMAGE}" alt="${movie.title}"/>  
         </div>
     `
 

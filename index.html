@@ -37,8 +37,20 @@
             </div>
         </div>
 
-        <div id="movies-container">
-            
+        <div id="movies-container-main">
+            <div id="heading-sort">
+                <div>List of Movies</div>
+                <label for="sort">Sort By:</label>
+                <select name="sort" id="sort">
+                    <option value="popularity.desc">Popularity</option>
+                    <option value="vote_average.desc">vote_average</option>
+                    <option value="release_date.desc">Release_date</option>
+                </select>
+            </div>
+            <div id="movies-container"></div>
+            <div id="btn-holder">
+                <button id="more-btn">Load More</button>
+            </div>
         </div>
 
 

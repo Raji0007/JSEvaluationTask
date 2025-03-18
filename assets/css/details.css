@@ -23,7 +23,7 @@
     flex-direction: column;
 
     background: linear-gradient(
-        rgba(0, 0, 0, 0.3) 0%,   
+        rgba(0, 0, 0, 0.5) 0%,   
         rgba(0, 0, 0, 0.9) 10%, 
         rgba(0, 0, 0, 1) 30%);
 
@@ -145,8 +145,14 @@
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;  
+    transition: 0.2s all ease;  
 }   
+
+.buttons #fvt-btn:hover{
+    background-color: rgb(185, 28, 28);
+    scale: 1.05;
+}
 
 #overview{
     width: 80%;
