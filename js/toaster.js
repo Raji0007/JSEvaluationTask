@@ -7,10 +7,10 @@ export const showToast = (message, type = 'info', duration = 3000) => {
 
     setTimeout(() => {
         toast.classList.add('show');
-    }, 100); 
+    }, 100);
 
     setTimeout(() => {
         toast.classList.remove('show');
-        setTimeout(() => toast.remove(), 300); 
+        setTimeout(() => toast.remove(), 300);
     }, duration);
 };

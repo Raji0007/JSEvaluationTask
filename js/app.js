@@ -17,16 +17,16 @@ export const loadMovies = async (page = current_page, sortBy = sortby, append = 
         movies.results.forEach(movie => {
             const movie_card = createMovieCard(movie);
             movies_container.appendChild(movie_card);
-            
+
             const btnHolder = movie_card.querySelector('.btn-holder');
-            
+
             if (!btnHolder) {
                 console.error(`.btn-holder not found in movie card for movie ID: ${movie.id}`);
-                return; 
+                return;
             }
             btnHolder.innerHTML = '';
 
-            const fvtBtn = createFavouriteButton(movie); 
+            const fvtBtn = createFavouriteButton(movie);
             btnHolder.appendChild(fvtBtn);
         });
     } catch (error) {

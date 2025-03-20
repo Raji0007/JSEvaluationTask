@@ -1,29 +1,29 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
 }
 
-.main nav{
+.main nav {
     width: 100%;
     height: 3.5rem;
     background-color: black;
-    position:fixed;
+    position: fixed;
 
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
     z-index: 95;
-} 
+}
 
-.nav-left{
+.nav-left {
     width: 50%;
     height: 100%;
 
@@ -36,7 +36,7 @@
     padding-left: 20px;
 }
 
-.nav-left .icon{
+.nav-left .icon {
     width: 7%;
     height: 60%;
 
@@ -45,12 +45,14 @@
     background-position: center;
     background-size: cover;
 }
-.nav-left .title{
+
+.nav-left .title {
     color: white;
     font-size: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.nav-left .menu{
+
+.nav-left .menu {
     width: 10%;
     font-size: 14px;
     color: white;
@@ -62,17 +64,17 @@
     margin-left: 40px;
 }
 
-.nav-left .menu .item{
+.nav-left .menu .item {
     text-decoration: none;
     color: white;
     padding-bottom: 5px;
 }
 
-.active{
+.active {
     border-bottom: 2px solid white;
 }
 
-.nav-left .menu .item:hover{
+.nav-left .menu .item:hover {
     color: rgb(218, 211, 211);
     cursor: pointer;
 }
@@ -96,6 +98,14 @@
     transform: translateY(0);
 }
 
-.toast-success { background-color: #4CAF50; }
-.toast-error { background-color: #F44336; }
-.toast-info { background-color: #2196F3; }
+.toast-success {
+    background-color: #4CAF50;
+}
+
+.toast-error {
+    background-color: #F44336;
+}
+
+.toast-info {
+    background-color: #2196F3;
+}

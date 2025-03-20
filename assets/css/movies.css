@@ -1,4 +1,4 @@
-#heading-sort{
+#heading-sort {
     width: 100%;
     height: auto;
     background-color: black;
@@ -10,13 +10,13 @@
     margin-top: 3.5rem;
 }
 
-#heading-sort div{
+#heading-sort div {
     color: white;
     font-size: 24px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#heading-sort select{
+#heading-sort select {
     position: absolute;
     right: 35px;
 
@@ -28,7 +28,7 @@
     border: 1px solid white;
 }
 
-#heading-sort label{
+#heading-sort label {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
@@ -38,7 +38,7 @@
     z-index: 1;
 }
 
-#movies-container{
+#movies-container {
     height: auto;
 
     display: grid;
@@ -48,25 +48,25 @@
     background-color: black;
 }
 
-.movie-card{
+.movie-card {
     width: 185px;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     transition: 0.2s all ease;
 }
 
-.movie-card .movie-image img{
+.movie-card .movie-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.movie-card:hover{
+.movie-card:hover {
     scale: 1.05;
 }
 
-#btn-holder-more{
+#btn-holder-more {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,14 +74,15 @@
     padding: 20px;
 }
 
-.btn-holder{
+.btn-holder {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
     padding: 20px;
 }
-.fvt-btn{
+
+.fvt-btn {
     color: white;
     border: 1px solid white;
     font-size: 12px;
@@ -91,23 +92,25 @@
     width: 100%;
     text-align: center;
 }
-.fvt-btn:hover{
+
+.fvt-btn:hover {
     scale: 1.01;
     background-color: rgb(205, 59, 59);
     cursor: pointer;
 }
-#more-btn{
+
+#more-btn {
     align-self: center;
     padding: 12px;
-    outline:none;
+    outline: none;
     border: 1px solid white;
     color: white;
-    background-color: black; 
-    border-radius: 8px; 
-    transition: 0.2s all ease;  
+    background-color: black;
+    border-radius: 8px;
+    transition: 0.2s all ease;
 }
 
-#more-btn:hover{
+#more-btn:hover {
     scale: 1.05;
 
 }

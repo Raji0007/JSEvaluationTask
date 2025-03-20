@@ -3,76 +3,76 @@ import { IMAGE_BASE_URL, DEFAULT_IMAGE } from "./config.js"
 import { Favourites } from "./favourite.js"
 import { getStorage } from "./storage.js"
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
     loadMovieDetails()
 })
 
-export const loadMovieDetails = async() =>{
-   try{
-    const urlParams = new URLSearchParams(window.location.search)
-    const movieId = urlParams.get('id')
+export const loadMovieDetails = async () => {
+    try {
+        const urlParams = new URLSearchParams(window.location.search)
+        const movieId = urlParams.get('id')
 
-    if(!movieId){
-        window.location.href  = `index.html`
-        return
-    }else{
-        const movie = await fetchMovieDetails(movieId)
-        
-        const backdrop =  document.getElementById('backdrop')
-        backdrop.src = movie.backdrop_path?`${IMAGE_BASE_URL}${movie.backdrop_path}`:DEFAULT_IMAGE
+        if (!movieId) {
+            window.location.href = `index.html`
+            return
+        } else {
+            const movie = await fetchMovieDetails(movieId)
 
-        const poster = document.getElementById('poster')
-        poster.src = movie.poster_path?`${IMAGE_BASE_URL}${movie.poster_path}`:DEFAULT_IMAGE
+            const backdrop = document.getElementById('backdrop')
+            backdrop.src = movie.backdrop_path ? `${IMAGE_BASE_URL}${movie.backdrop_path}` : DEFAULT_IMAGE
 
-        const title = document.getElementById('name')
-        title.textContent = movie.title
+            const poster = document.getElementById('poster')
+            poster.src = movie.poster_path ? `${IMAGE_BASE_URL}${movie.poster_path}` : DEFAULT_IMAGE
 
-        const year = document.getElementById('year')
-        year.textContent = `Date of Release: ${movie.release_date}`
+            const title = document.getElementById('name')
+            title.textContent = movie.title
 
-        const list = document.getElementById('genre-list')
-        const genres = movie.genres
+            const year = document.getElementById('year')
+            year.textContent = `Date of Release: ${movie.release_date}`
 
-        genres.forEach(genre => {
-            const listElement = document.createElement('li')
-            listElement.innerText = genre.name
-            list.appendChild(listElement)
-        });
+            const list = document.getElementById('genre-list')
+            const genres = movie.genres
 
-        const overview = document.getElementById('overview')
-        overview.textContent = movie.overview
+            genres.forEach(genre => {
+                const listElement = document.createElement('li')
+                listElement.innerText = genre.name
+                list.appendChild(listElement)
+            });
 
-        const fvtMovies = getStorage()
+            const overview = document.getElementById('overview')
+            overview.textContent = movie.overview
 
-        const isAlreadyAdded = fvtMovies.some(movie => movie.id == movieId)
+            const fvtMovies = getStorage()
 
-        const fvtBtn = document.getElementById('fvt-btn')
+            const isAlreadyAdded = fvtMovies.some(movie => movie.id == movieId)
 
-        if(!isAlreadyAdded){
-            fvtBtn.innerHTML = `&#43; Add to Favourites`
-            fvtBtn.classList.add('addfvt')
-        }else{
-            fvtBtn.innerHTML = `Remove from Favourites`
-            fvtBtn.classList.add('rmfvt')
+            const fvtBtn = document.getElementById('fvt-btn')
+
+            if (!isAlreadyAdded) {
+                fvtBtn.innerHTML = `&#43; Add to Favourites`
+                fvtBtn.classList.add('addfvt')
+            } else {
+                fvtBtn.innerHTML = `Remove from Favourites`
+                fvtBtn.classList.add('rmfvt')
+            }
+
+            document.getElementById('fvt-btn').addEventListener('click', function () {
+                Favourites(this, movie)
+            })
         }
-
-        document.getElementById('fvt-btn').addEventListener('click', function(){
-            Favourites(this, movie)
-        })
+    } catch (error) {
+        console.log(error)
     }
-   }catch(error){
-    console.log(error)
-   }
 }
 
 const items = document.querySelectorAll('.item')
 
-items.forEach(element=>{
-  element.addEventListener('click', function(){
+items.forEach(element => {
+    element.addEventListener('click', function () {
 
-    items.forEach(item=>{
-      item.classList.remove('active')
+        items.forEach(item => {
+            item.classList.remove('active')
+        })
+        element.classList.add('active')
     })
-    element.classList.add('active')
-  })
 })

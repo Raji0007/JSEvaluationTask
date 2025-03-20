@@ -27,17 +27,17 @@ const fvtMovies = document.getElementById('fav-movies-container');
 export const loadFavouriteMovies = () => {
     const Movies = getStorage();
 
-    if(fvtMovies){
+    if (fvtMovies) {
         fvtMovies.innerHTML = ''
     }
-    
 
-    if(Movies.length == 0){
-    if(fvtMovies) {
-        fvtMovies.style.color = 'red'
-        fvtMovies.style.fontSize = '24px'
-        fvtMovies.innerHTML = `No favourites!`
-        return
+
+    if (Movies.length == 0) {
+        if (fvtMovies) {
+            fvtMovies.style.color = 'red'
+            fvtMovies.style.fontSize = '24px'
+            fvtMovies.innerHTML = `No favourites!`
+            return
         }
     }
 
@@ -45,15 +45,15 @@ export const loadFavouriteMovies = () => {
         const card = createMovieCard(movie);
 
         const btnHolder = card.querySelector('.btn-holder');
-        
+
         if (!btnHolder) {
             console.error(`.btn-holder not found in movie card for movie ID: ${movie.id}`);
             return;
         }
 
-        btnHolder.innerHTML = ''; 
+        btnHolder.innerHTML = '';
 
-        const fvtBtn = createFavouriteButton(movie); 
+        const fvtBtn = createFavouriteButton(movie);
         btnHolder.appendChild(fvtBtn);
 
         fvtMovies.appendChild(card);

@@ -29,7 +29,7 @@ export const createFavouriteButton = (movie) => {
             fvtBtn.innerHTML = `&#43; Add to Favourites`;
             fvtBtn.classList.remove('rmfvt');
             fvtBtn.classList.add('addfvt');
-            
+
             loadFavouriteMovies()
         } else {
             updatedMovies.push(movie);

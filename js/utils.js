@@ -16,7 +16,7 @@ export const createMovieCard = (movie) => {
         </div>
     `
     const btnHolder = card.querySelector('.btn-holder')
-    const fvtBtn = createFavouriteButton(movie) 
+    const fvtBtn = createFavouriteButton(movie)
     btnHolder.appendChild(fvtBtn)
 
     card.addEventListener('click', function () {

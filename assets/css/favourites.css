@@ -1,4 +1,4 @@
-#main-fav-movies{
+#main-fav-movies {
     display: flex;
     flex-direction: column;
 
@@ -9,8 +9,8 @@
     box-sizing: border-box;
 }
 
-#fav-head{
-    color:white;
+#fav-head {
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
     background-color: black;
@@ -18,27 +18,27 @@
     margin-left: 15px;
 }
 
-#fav-movies-container{
+#fav-movies-container {
     height: auto;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(6, 1fr);
     padding: 20px;
-    background-color: black;   
+    background-color: black;
 }
 
-.movie-card{
+.movie-card {
     width: 185px;
-    box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     transition: 0.2s all ease;
 }
 
-.movie-card .movie-image img{
+.movie-card .movie-image img {
     object-fit: cover;
     border-radius: 8px;
 }
 
-.movie-card:hover{
+.movie-card:hover {
     scale: 1.05;
 }

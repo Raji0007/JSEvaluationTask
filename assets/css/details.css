@@ -1,4 +1,4 @@
-.movie-details{
+.movie-details {
     width: 100%;
     height: auto;
 
@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-.movie-details #backdrop{
+.movie-details #backdrop {
     width: 100%;
     height: 80vh;
     background-size: cover;
@@ -22,15 +22,14 @@
     display: flex;
     flex-direction: column;
 
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.5) 0%,   
-        rgba(0, 0, 0, 0.9) 10%, 
-        rgba(0, 0, 0, 1) 30%);
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%,
+            rgba(0, 0, 0, 0.9) 10%,
+            rgba(0, 0, 0, 1) 30%);
 
     padding: 10px;
 }
 
-.poster-title{
+.poster-title {
     width: 100%;
     height: auto;
     padding-top: 50px;
@@ -42,13 +41,13 @@
 
 }
 
-.poster-title #poster{
+.poster-title #poster {
     width: 20%;
     height: 300px;
     border-radius: 12px;
 }
 
-.poster-title #title{
+.poster-title #title {
     width: 25%;
     height: 300px;
 
@@ -57,20 +56,20 @@
     gap: 20px;
 }
 
-#title #name{
+#title #name {
     width: 100%;
     font-size: 40px;
-    font-style:italic;
+    font-style: italic;
     color: white;
 }
 
-#title #year{
+#title #year {
     font-size: 20px;
-    font-style:italic;
-    color:white
+    font-style: italic;
+    color: white
 }
 
-#title #genre{
+#title #genre {
     font-size: 14px;
     color: white;
 }
@@ -83,15 +82,16 @@
     padding-left: 20px;
 }
 
-#genre-list li{
+#genre-list li {
     list-style-type: disc;
 }
-#genre-list li::marker{
+
+#genre-list li::marker {
     color: green;
     font-size: 1.2rem;
 }
 
-.pricing{
+.pricing {
     width: 50%;
 
     padding-left: 20px;
@@ -100,7 +100,7 @@
     font-size: 12px;
 }
 
-.buttons{
+.buttons {
     width: 100%;
     height: auto;
 
@@ -112,7 +112,7 @@
     padding-left: 20px;
 }
 
-.buttons .btn1{
+.buttons .btn1 {
     width: 200px;
     height: 40px;
 
@@ -121,10 +121,10 @@
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;    
-}   
+    justify-content: center;
+}
 
-.buttons .btn2{
+.buttons .btn2 {
     width: 200px;
     height: 40px;
 
@@ -133,10 +133,10 @@
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;    
-}   
+    justify-content: center;
+}
 
-.buttons #fvt-btn{
+.buttons #fvt-btn {
     width: 200px;
     height: 40px;
 
@@ -145,16 +145,16 @@
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;  
-    transition: 0.2s all ease;  
-}   
+    justify-content: center;
+    transition: 0.2s all ease;
+}
 
-.buttons #fvt-btn:hover{
+.buttons #fvt-btn:hover {
     background-color: rgb(185, 28, 28);
     scale: 1.05;
 }
 
-#overview{
+#overview {
     width: 80%;
 
     padding-left: 20px;
