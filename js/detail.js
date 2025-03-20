@@ -7,10 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
     loadMovieDetails()
 })
 
-
-
 export const loadMovieDetails = async() =>{
-
    try{
     const urlParams = new URLSearchParams(window.location.search)
     const movieId = urlParams.get('id')
@@ -20,10 +17,8 @@ export const loadMovieDetails = async() =>{
         return
     }else{
         const movie = await fetchMovieDetails(movieId)
-        console.log(movie)
-
         
-       const backdrop =  document.getElementById('backdrop')
+        const backdrop =  document.getElementById('backdrop')
         backdrop.src = movie.backdrop_path?`${IMAGE_BASE_URL}${movie.backdrop_path}`:DEFAULT_IMAGE
 
         const poster = document.getElementById('poster')

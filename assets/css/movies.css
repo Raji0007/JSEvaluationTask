@@ -7,6 +7,7 @@
     flex-direction: row;
     align-items: center;
     padding: 15px;
+    margin-top: 3.5rem;
 }
 
 #heading-sort div{
@@ -65,15 +66,36 @@
     scale: 1.05;
 }
 
-#btn-holder{
+#btn-holder-more{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
-
+.btn-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+}
+.fvt-btn{
+    color: white;
+    border: 1px solid white;
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.2s all ease;
+    width: 100%;
+    text-align: center;
+}
+.fvt-btn:hover{
+    scale: 1.01;
+    background-color: rgb(205, 59, 59);
+    cursor: pointer;
+}
 #more-btn{
     align-self: center;
     padding: 12px;
