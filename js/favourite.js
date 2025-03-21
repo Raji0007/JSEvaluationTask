@@ -40,24 +40,27 @@ export const loadFavouriteMovies = () => {
             return
         }
     }
-
-    Movies.forEach(movie => {
-        const card = createMovieCard(movie);
-
-        const btnHolder = card.querySelector('.btn-holder');
-
-        if (!btnHolder) {
-            console.error(`.btn-holder not found in movie card for movie ID: ${movie.id}`);
-            return;
-        }
-
-        btnHolder.innerHTML = '';
-
-        const fvtBtn = createFavouriteButton(movie);
-        btnHolder.appendChild(fvtBtn);
-
-        fvtMovies.appendChild(card);
-    });
+    if(Movies){
+        Movies.forEach(movie => {
+            const card = createMovieCard(movie);
+    
+            const btnHolder = card.querySelector('.btn-holder');
+    
+            if (!btnHolder) {
+                console.error(`.btn-holder not found in movie card for movie ID: ${movie.id}`);
+                return;
+            }
+    
+            btnHolder.innerHTML = '';
+    
+            const fvtBtn = createFavouriteButton(movie);
+            btnHolder.appendChild(fvtBtn);
+    
+            if(fvtMovies){
+                fvtMovies.appendChild(card);
+            }
+        });
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
