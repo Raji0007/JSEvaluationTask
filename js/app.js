@@ -9,7 +9,6 @@ const movies_container = document.getElementById('movies-container');
 
 export const loadMovies = async (page = current_page, sortBy = sortby, append = false) => {
     try {
-        console.log(page)
         const movies = await fetchMovies(page, sortBy);
         if (!append) {
             movies_container.innerHTML = '';
